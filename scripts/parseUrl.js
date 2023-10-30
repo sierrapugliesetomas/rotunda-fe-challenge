@@ -4,7 +4,6 @@ function parseUrl(urlFormat, urlInstance) {
   const urlVariablePartsValues = getUrlVariablePartsValues(urlFormat, urlInstance);
   const urlParams = getUrlParams(urlInstance);
 
-
   urlVariablePartsKeys.forEach((variable, index) => {
     parsedUrl[variable] = urlVariablePartsValues[index];
   });
@@ -32,7 +31,8 @@ function getUrlVariablePartsValues(urlFormat, urlInstance) {
     .split(urlPartRegex)
     .filter(variablePart => !urlFormat.includes(variablePart))
     .map(value =>
-      parseValue(decodeURIComponent(value.replace(spaceRegex, " "))));
+      parseValue(decodeURIComponent(value.replace(spaceRegex, " ")))
+    );
 }
 
 function getUrlParams(urlInstance) {

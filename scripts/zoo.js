@@ -12,11 +12,11 @@ class Animal {
     .map((str, index) => {
       let mappedStr = str;
       if (index < length - 1 || specialCharsRegex.test(str)) {
-      	mappedStr = str.concat(` ${this.sound}`)
+      	mappedStr = str.concat(` ${this.sound}`);
       }
       return mappedStr;
     })
-	  .join(" ")
+	  .join(" ");
   }
 }
 
