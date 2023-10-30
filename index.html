@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rotunda Challenge</title>
+  <script src="scripts/parseUrl.js" defer></script>
+  <link rel="stylesheet" href="./styles/styles.css">
+  <link rel="icon" href="./favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+  <div class="form__container">
+    <h1>URL Parser 🧰</h1>
+    <form onsubmit="handleFormSubmit(event)">
+      <input class="form__input" minlength="3" type="text" id="urlFormat" placeholder="URL format" required>
+      <input class="form__input" minlength="3" type="text" id="urlInstance" placeholder="URL instance" required>
+      <button class="form__button" type="submit">Get parsed
+        URL!</button>
+    </form>
+    <div class="parser-result__container">
+      <button type="button" id="copy-button" class="copy-button" onclick="copyToClipboard()"
+        title="Copy to clipboard">📋</button>
+      <pre id="parsedURL">
+        </pre>
+    </div>
+  </div>
+</body>
+
+</html>
